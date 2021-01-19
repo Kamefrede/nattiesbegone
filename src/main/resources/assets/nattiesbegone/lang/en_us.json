@@ -1,0 +1,15 @@
+{
+  "nattiesbegone.classification_print": "The %s entity classification disallows the following types of spawns : %s",
+  "nattiesbegone.empty_classification": "The %s entity classification currently has no rules.",
+  "nattiesbegone.spawn_reason.not_present": "The %s rule is not present in the %s entity classification",
+  "nattiesbegone.entity_classification.unknown": "Unknown or invalid entity classification",
+  "nettiesbegone.help.0": "Nettiesbegone command usage:",
+  "nettiesbegone.help.1": "/nettiesbegone help -> prints this message",
+  "nettiesbegone.help.2": "/nettiesbegone add <classification> <rule> -> adds a rule to the specified entity classification",
+  "nettiesbegone.help.3": "/nettiesbegone remove <classification> <rule> -> removes the rule from the specified entity classification",
+  "nettiesbegone.help.4": "/nettiesbegone get <classification> -> prints out to chat all the rules in the specified entity classification",
+  "nettiesbegone.help.5": "/nettiesbegone batswitch -> Toggles the spawning of bats",
+  "nettiesbegone.help.6": "IMPORTANT NOTE: Rely on the command argument suggestions when using the command",
+  "nettiesbegone.darkknightfalls": "\uD83E\uDD80 Bats are no more \uD83E\uDD80",
+  "nettiesbegone.darkknightrises": "Bats can now spawn again..."
+}

@@ -1,12 +1,12 @@
 {
   "required": true,
-  "package": "com.example.examplemod.mixin",
+  "package": "xyz.kamefrede.nattiesbegone.mixin",
   "compatibilityLevel": "JAVA_8",
-  "refmap": "examplemod.refmap.json",
+  "refmap": "nattiesbegone.refmap.json",
   "mixins": [
+    "AccessorEntityClassification"
   ],
-  "client":[
-    "ExampleMixin"
+  "client": [
   ],
   "injectors": {
     "defaultRequire": 1
