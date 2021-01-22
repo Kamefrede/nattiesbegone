@@ -9,8 +9,8 @@ import java.util.Map;
 
 @Mixin(EntityClassification.class)
 public interface AccessorEntityClassification {
-	@Accessor("VALUES_MAP")
-	public static Map<String, EntityClassification> getValuesMap() {
+	@Accessor
+	static Map<String, EntityClassification> getVALUES_MAP() {
 		throw new AssertionError();
 	}
 }

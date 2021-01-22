@@ -28,14 +28,14 @@ public class EntityClassificationArgument implements ArgumentType<EntityClassifi
 	@Override
 	public EntityClassification parse(StringReader reader) throws CommandSyntaxException {
 		String classification_string = reader.readUnquotedString();
-		if (!AccessorEntityClassification.getValuesMap().containsKey(classification_string))
+		if (!AccessorEntityClassification.getVALUES_MAP().containsKey(classification_string))
 			throw ENTITY_CLASSIFICATION_UNKNOWN.create(classification_string);
-		return AccessorEntityClassification.getValuesMap().get(classification_string);
+		return AccessorEntityClassification.getVALUES_MAP().get(classification_string);
 	}
 
 	@Override
 	public <S> CompletableFuture<Suggestions> listSuggestions(CommandContext<S> context, SuggestionsBuilder builder) {
-		return ISuggestionProvider.suggest(AccessorEntityClassification.getValuesMap().keySet(), builder);
+		return ISuggestionProvider.suggest(AccessorEntityClassification.getVALUES_MAP().keySet(), builder);
 	}
 
 	@Override
