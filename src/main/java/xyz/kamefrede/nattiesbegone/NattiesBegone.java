@@ -1,5 +1,7 @@
 package xyz.kamefrede.nattiesbegone;
 
+import net.minecraft.command.arguments.ArgumentSerializer;
+import net.minecraft.command.arguments.ArgumentTypes;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
 import net.minecraftforge.event.RegisterCommandsEvent;
@@ -10,6 +12,8 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -22,6 +26,11 @@ public class NattiesBegone {
 
     public NattiesBegone() {
         ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, Config.SERVER_SPEC);
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::preInit);
+    }
+
+    public void preInit(FMLCommonSetupEvent event) {
+        ArgumentTypes.register("nattiesbegone:entityclassification", EntityClassificationArgument.class, new ArgumentSerializer<>(EntityClassificationArgument::entityClassificationArgument));
     }
 
     @Mod.EventBusSubscriber(modid = NattiesBegone.MODID, bus = Mod.EventBusSubscriber.Bus.FORGE)
